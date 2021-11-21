@@ -5,22 +5,51 @@
 ### Data structures
 
 #### What is the purpose of a list (array in some programming languages) data structure? Name some methods of it!
+    a list is used to store and ordered collection of items,list elements can be any data type. 
+    some methods of lists:pop(),sort(),append(),count(),remove()
 #### What is the difference between a list/array and a set?
+    the elements in a set ar immutable,set elements don't have indexes and there can't be duplicate elements in a set
 #### What is the purpose and methods of a dictionary/map data structure?
+    a dictionary holds pairs of values (key + value) since python 3.7 dictionaries are an ordered data structure. 
+    some example methods:get(),fromkeys(),pop(),keys(),items()
 
 ### Algorithms
 
 #### Fibonacci sequences. Write a method (or pseudo code), that generates the Fibonacci sequences.
+        def fibonacci(length):
+            numlist = [0, 1]
+            for index in range(2, length):
+                numlist.append(numlist[index - 1] + numlist[index - 2])
+            return numlist
+
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
+    def max(values_list):
+        for i in values_list:
+            max = 0
+            if max < values_list[i]:
+                max = values_list[i]
+        return max
+
 #### How do you find the average of values in a list/array if you can’t use any built-in functions?
+        def average(value_list):
+            return sum(value_list) / len(value_list)
 #### What do we call an *in-place* sort?
+    a sorting algorithm that doesnt use additional memory space and produces the output in the same memory that contains the data
 #### Explain an algorithm which sorts a list!
 
 ### Programming paradigms - procedural
 
 #### What is the call stack?
+    a stack of the called methods in the program in order of them being called(first in last out)
 #### What is “Stack overflow”?
+    a stack overflow is when the call stack pointer exceeds the stack bound.
+    Meaning the program attempts to use more memory than is available for the stack.
 #### What are the main parts of a function?
+    "def" that marks the start of a function and function name
+    arguments(optional)
+    docstring(optional)
+    function body
+    return statement(optional)
 
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
@@ -85,13 +114,31 @@
 ### Unix
 
 #### What is UNIX and what is Linux?
+    Unix is a family of OSes derived from the original at&t unix
+    Linux is a family of OSes derived from unix
 #### What do we call the shell in Linux?
+    an interface that allows the user to run commands
 #### What does root means in a Linux environment?
+    root refers to the root user that has access to all commands and files or the root directory of a drive
 #### How do you access your personal files in Linux?
 #### How can you install an application in Linux?
+    apt-get install
 #### What is package management in Linux, what are repositories?
 #### How do you navigate in the filesystem with the command line?
+    you can change directories with the cd command
 #### What does the following commands do: mkdir, rm, cat, cp, touch?
+    mkdir:makes a new directory
+    rm:removes a file
+    cat:outputs content of a file
+    cp:copies files and directories
+    touch:changes file timestamp
 #### How can you look up what does a command do in Linux if you have no internet connection?
+    help [command] or man -k [command] or info [command]
 #### What does the following commands do: head, tail, more, less?
+    head outputs the first 10 lines of a file or the first n lines if -n is used
+    tail outputs the last 10 lines of a file or the last n lines if -n is used
+    more outputs the contents of a file and lets you navigate the file by lines(enter) or by pages(spacebar)
+    less is similiar to the more command but allows you to navigate with arrow keys
+
 #### How do you download a file from internet using the terminal?
+    use the wget [url] or curl [url] command
