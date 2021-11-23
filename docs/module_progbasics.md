@@ -78,11 +78,26 @@ return statement(optional)
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
 #### What does it mean that an object is immutable in Python?
+an object being immutable means it can't be modified in memory.
 #### What is conditional expression in Python?
+an expression that executes a block of code based on the given condition being true or false
 #### What are different types of arguments in Python?
+default arguments.
+keyword arguments.
+positional arguments.
+arbitrary arguments.
 #### What is variable shadowing? (context: variable scope)
+shadowing is when a variable is declared within a certain scope with the same name as a variable in an outer scope
 #### What can happen if you try to delete/drop/add an item from a List, while you are iterating over it in Python?
+if you delet a list item while iterating over the list the deleted item will simply be removed from the list.
+if you add an item it gets added to the list and will be iterated over like the other items
 #### What is the "golden rule" of variable scoping in Python (context: LEGB)? What is the lifetime of variables?
+the LEGB rule determines the order in wich python looks up variable names.
+when a variable is referenced python will look that name up sequentially in the local, enclosing, global, and built-in scope, giving the first occurence of it or an error if it's not found.
+
+The lifetime of variables inside a function is as long as the function executes, they are destroyed after the function returns or terminates.
+Global variables live from when the module is imported until the end of the application - unless the variable is explicitly deleted.
+Built-in variables live from the start of the interpreter until the code exits.
 #### If you need to access the iterator variable after a for loop, how would you do it in Python?
 #### What type of elements can a list contain in Python?
 #### What is slice operator in Python and how to use?
@@ -119,8 +134,17 @@ return statement(optional)
 ### Clean code
 
 #### What does clean code mean?
-#### What steps do we usually do during a clean code refactoring?
+code that is easy to understand and easy to change.
+variable and function names are easy to understand
+methods are small and only have single responsibility
+doesn't contain any dead or duplicate code
 
+
+#### What steps do we usually do during a clean code refactoring?
+rename variables and functions if their names aren't easy to understand.
+extract duplicate code to seperate functions.
+extract complicated expressions into seperate variables to make them easier to understand.
+make sure our codes functionality is unchanged
 ### Error handling
 
 #### What is exception handling?
@@ -161,6 +185,8 @@ navigate to the /home/username folder
 #### How can you install an application in Linux?
 apt-get install
 #### What is package management in Linux, what are repositories?
+Package management is a way of installing, updating, removing software from repositories
+A repository(repo) is a storage location for software packages
 #### How do you navigate in the filesystem with the command line?
 you can change directories with the cd command
 #### What does the following commands do: mkdir, rm, cat, cp, touch?
