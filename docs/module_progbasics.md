@@ -47,7 +47,7 @@ initialize pivot variable with the last element of our list as its value
 iterate through the items in the list
 if the item is greater than our pivot variable, add it to the greater list
 if its lower than our pivot, add it to the lower list
-sort the greater and lower list with the same   method, add our pivot in the middle and return the concatenated list
+sort the greater and lower list with the same method, add our pivot in the middle and return the concatenated list
     
     def quicksort(sequence):
         greater = [] 
@@ -77,6 +77,10 @@ return statement(optional)
 
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
+Dictionaries are used to store key-value pairs. They are insertion ordered, mutable and indexed
+dict = {key:value}
+Referencing keys value in dictionary: dict['key'] returns the value 
+Referencing key in dictionary: dict['key'].key() returns the key
 #### What does it mean that an object is immutable in Python?
 an object being immutable means it can't be modified in memory.
 #### What is conditional expression in Python?
@@ -99,36 +103,76 @@ The lifetime of variables inside a function is as long as the function executes,
 Global variables live from when the module is imported until the end of the application - unless the variable is explicitly deleted.
 Built-in variables live from the start of the interpreter until the code exits.
 #### If you need to access the iterator variable after a for loop, how would you do it in Python?
+The iterator variable can still be accessed after the for loop completes, you can reference it like any other variable.
 #### What type of elements can a list contain in Python?
+Lists can conatin any type of object
 #### What is slice operator in Python and how to use?
+The slice operator returns a slice from a string,list or tupple between the n and m index with the first index being inclusive and the last index being exclusive.For example mylist[n:m] 
 #### What arithmetic operators (+,*,-,/) can be used on lists in Python? What do they do?
++:addition(also used to concatenate strings and lists)
+*:multiplication
+-:subtraction
+/:division
 #### What is the purpose of the in and not in membership operators in Python?
+the "in" and "not" in operators can be used to determine if a value can be found in a variable
 #### What does the + operator mean when used with strings in Python?
+When the + operator is used on strings, it joins the two strings together.
+"The qu"+"ick br"+"own f"+"ox jumps" = "The quick brown fox jumps"
 #### Explain f strings in Python?
+f strings are string literals that have an f at the beginning and {} containing expressions that will be replaced with their values. 
 #### Name 4 iterable types in Python!
+list,tupple,set,dictionary
 #### What is the difference between list/set/dictionary comprehension and a generator expression in Python?
+A generator yields one value at a time and generates it only when in demand. With a list comprehension Python keeps the whole list in memory.
+Generators are memory efficient but comprehensions are faster.
 #### Does the order of the function definitions matter in Python? Why?
+Function definition order doesn't matter. If a function is defined when it's looked up(called) it's going to work.
 #### What does unpacking mean in Python?
+Unpacking is assigning an iterable of values to a tuple (or list) of variables in a single assignment statement.
+when unpacking we can use any iterable on the right side of the assignment operator. The left side can be filled with a tuple or with a list of variables.
+The * operator can be used to unpack all the values of an iterable that have not been assigned yet.
+*range(5)
+(0,1,2,3,4)
+
 #### What happens when you try to assign the result of a function which has no return statement to a variable in Python?
+the variable will be assigned a None value
 
 ## Software engineering
 
 ### Debugging
 
 #### What techniques can you use while debugging a program in Python?
+Use the python builtin debugger(PDB)
+Use the debugger built into the IDE.
+Using breakpoints and tracepoints.
+Use print function to try to pinpoint the problem.
 #### What does step over, step into and step out mean while using the debugger?
+step over: step over a line of code, if the line is a function it will be executed and the result returned without going over each line of the function
+step into:same as step over, but if the line is a function it will run the function line by line
+step out:return to the line where the function was called
 #### How can you start to debug a program from a certain line using the debugger?
+By placing a breakpoint on the line you want to start the debugging from.
 
 ### Version control
 
 #### What are the advantages of using a version control system?
 #### What is the difference between the working directory, the staging area and the repository in git?
+Working directory: The current, active directory that you modify locally.
+Staging area: contains the files that are added with git add.
+Repositry: the repository tracks and saves the history of all changes made to the files in a project.
 #### What are remote repositories in git?
+Repositories stored on a remote server(either github or other hosting services)
 #### Why does a merge conflict occur?
+A merge conflict occurs when Git is unable to automatically resolve differences in code between two commits.
 #### Through what series of commands could you put a new file into a remote repository connected to your existing local repository?
+git add "file path"
+git commit -m "commit message"
+git push
 #### What does it mean atomic commits and descriptive commit messages?
+An atomic commit is is a commit that cannot be broken down into smaller parts,doesn't break the build and it's purpose is clear from the commit message.
+A descriptive commit message is one that accurately and clearly describes the changes made by the commit.
 #### What’s the difference between git and GitHub?
-
+git is a version control system, while github is a hosting service for storing and managing git repositories.
 ## Software design
 
 ### Clean code
@@ -144,6 +188,7 @@ doesn't contain any dead or duplicate code
 rename variables and functions if their names aren't easy to understand.
 extract duplicate code to seperate functions.
 extract complicated expressions into seperate variables to make them easier to understand.
+delete unused imports
 make sure our codes functionality is unchanged
 ### Error handling
 
@@ -156,9 +201,10 @@ The code which may raise an exception is placed inside the try clause. The code 
 So we can choose what operations to perform if an exception occurs
 
 #### In which case should we catch an exception? Why?
-We should only catch an exception if we know how to handle it 
+Any time a specific error can be excepted we should use exceptions
 
 #### What can/should we do with an exception in the ‘except’ block?
+Print an error message or log it to a file and either continue executing our code or break
 
 #### What does the else and finally statement do in a try-except block in Python?
 the else statement runs if the code in the try block didn't raise any errors.
