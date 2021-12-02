@@ -70,7 +70,7 @@ a stack overflow is when the call stack pointer exceeds the stack bound.
 Meaning the program attempts to use more memory than is available for the stack.
 #### What are the main parts of a function?
 definition("def") that marks the start of a function and function name
-arguments(optional)
+parameters(optional)
 docstring(optional)
 function body
 return statement(optional)
@@ -123,7 +123,7 @@ f strings are string literals that have an f at the beginning and {} containing 
 #### Name 4 iterable types in Python!
 list,tupple,set,dictionary
 #### What is the difference between list/set/dictionary comprehension and a generator expression in Python?
-A generator yields one value at a time and generates it only when in demand. With a list comprehension Python keeps the whole list in memory.
+A generator yields one value at a time and generates it only when in demand.A list comprehension Python stores the whole list in memory.
 Generators are memory efficient but comprehensions are faster.
 #### Does the order of the function definitions matter in Python? Why?
 Function definition order doesn't matter. If a function is defined when it's looked up(called) it's going to work.
@@ -156,6 +156,7 @@ By placing a breakpoint on the line you want to start the debugging from.
 ### Version control
 
 #### What are the advantages of using a version control system?
+Makes teamwork easier if you are able to merge different versions you worked on separately, helps with documenting the code while also allowing you to roll back to an earlier version if you need to.
 #### What is the difference between the working directory, the staging area and the repository in git?
 Working directory: The current, active directory that you modify locally.
 Staging area: contains the files that are added with git add.
