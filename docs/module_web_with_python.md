@@ -5,47 +5,131 @@
 ### Clean code
 
 #### Point out 5 suggestions, how to format an SQL query!
+Use consistent casing for your queries.
+Use the AS keyword for creating aliases to make the code more readable.
+Use indentation for better readability.
+Use a new line for each separate query.
+Use a new line for each separate column after a comma.
 #### What layers can you name in a simple web application?
+Front end(client-side)
+Back end (server-side)
 
 ### Error handling
 #### What error can occur, when an array does not have an element on the requested index?
+We get an IndexError exception.
 #### What is the “finally” block, and how would you use it?
+The finally block can be used after a try except block. The code inside the finally block will always execute after catching the exception.
 #### Why should we catch special exception types?
+Because we should only catch exceptions that we except to be thrown and know how to handle.
 
 ### Security
 #### What is SQL injection? How to protect an application against it?
+an sql injection is a vulnerability that allows an attacker to run sql queries on your server by typing those queries into input fields in your web app.
+you can protect an application from sql injections by sanitizing sql queries before they are ran on your server.
 #### What is XSS? How to protect an application against it?
+Cross-site scripting is a vulnerability that allows an attacker to send browser side scripts to other end users using the same web app.
+By default jinja2 escapes all html code to prevent XSS attacks.
 #### How to properly store passwords?
+The best way to store passwords is to not store them at all and rather just store a hash of the password.
 #### What is HTTPS?
+Hypertext Transfer Protocol Secure is the TLS encrypted version of HTTP.
 #### What is encryption and decryption?
+Encryption is the process of turning plain-text into ciphertext using an encryption algorithm.
+Decryption is the reverse of the proccess. Using the encryption key to decypher the ciphertext into plain-text.
 #### What is hashing?
+Hashing is the proccess of turning a string of any length into a fixed length hash by passing it through one or more one way mathematical functions.
 #### What is the difference between encryption and hashing? When would you use which?
+The main difference between encryption and hashing is reversibility. encrypted data can be decrypted if we have the encryption key but hashing is one way only,
+hashing is generally used for storing passwords and encryption is mostly used for sending data that needs to be readable by the recipient.
 #### What encryption methods do you know?
+TLS,AES,SERPENT,TWOFISH
 #### What hashing methods do you know?
+MD-5,SHA-1/2/3,bcrypt
 #### How/where would you store sensitive data (like db password, API key, ...) of your application?
-
+I would store hashes of sensitive data in an sql database.
 ## Computer science
 
 ### Algorithms
 
 #### What is the difference between Stack and Queue data structure?
+Both are containers of objects. the main difference is that objects in a stack are inserted and removed using the last in first out principle.
+objects in a queue are inserted and removed using the first in frist out principle
 #### What is BubbleSort? Describe the main logic of this sorting algorithm.
+bubble sort repeatedly steps through a list, compares adjacent elements and swaps them if they are in the wrong order. This is repeated until the list is sorted.
+
 #### Explain the process of finding the maximum and minimum value in a list of numbers!
+Initialize a variable named "max" with the first item of the array.
+Iterate through the list.
+If an item of the list is greater than the max variable: assign the value of that item to the max variable.
+    
+    def max(values_list):
+        max = values_list[0]
+        for i in values_list:
+            if max < values_list[i]:
+                max = values_list[i]
+        return max
+
 #### Explain the process of calculating the average value in an array of numbers!
+Divide the sum of list items by the length of the list
+
+        def average(value_list):
+            return sum(value_list) / len(value_list)
+
 #### What is Big O complexity? Explain time and space complexity!
+The big o notation is used to describe how the run time or space requirement of an algorithm grows in relation to the input size.
+time complexity describes the amount of time needed to run the algorithm in relation to the input size.
+space complexity describes the amount of space needed to run the algorithm in relation to the input size.
 #### Explain the process of calculating the average value in a list of numbers!
+Divide the sum of list items by the length of the list
+
+        def average(value_list):
+            return sum(value_list) / len(value_list)
 
 ### Procedural
 #### How the CASE condition works in SQL?
+The case condition works like a switch-case statement
+it checks through the conditions one by one and returns the values associated with the condition if it evaluates to true
+if none of the conditions return true it returns the value in the else clause.
+if none of the conditions are true and there is no else clause it returns NULL.
 #### How the switch-case condition works in JavaScript?
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case, if there is a match code associated with the condition is executed
+if none of the conditions match it executses the code in the default block
 #### How to achieve a switch-case-like structure in Python?
+By using the match-case statement introduced in python 3.10
 #### Explain variable scoping in Python!
+There are 4 types of variable scope in python.
+Local scope:Local scope variables can only be accessed within its block.
+Global scope:The variables that are declared in the global scope can be accessed from anywhere in the program.
+Enclosing scope: A scope that isn’t local or global comes under enclosing scope for example a variable declared in a function accessed from another function nested inside the initial function.
+Built-in scope:The widest scope in python. if an identifier isn't found in the other scopes python looks it up in the built-in scope.
 #### What’s the difference between const and var in JavaScript?
+const declarations are block scoped and cant be updated or re-declared
+var declerations are global scoped when not declared inside a function.
+var declarations can be updated and re-declared.
 #### How the list comprehension looks like in Python?
+example:
+
+        comprehension=[x for x in list if x>5] //will contain all elements of list that are greater than 5
 #### How the “ternary expression” looks like in Python?
+example:
+
+        x = 1 if [condition] else 2
+if the condition is true the value of x will be 1, if its false the value of x will be 2
 #### How the ternary expression looks like in JavaScript?
+        condition ? true:false
 #### How to import a function from another module in Python?
+        from module import function_name
 #### How to import a function from another module in JavaScript?
+export the function from the module first:
+
+    export function functionName(){
+        pass
+    }
+    
+then import it:
+
+    import {functionName} from 'filePath'
 
 ### Functional
 #### What is recursion?
