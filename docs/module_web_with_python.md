@@ -268,8 +268,12 @@ Any time we want to asynchronously download data in the background we should use
 DOM is the document object model, the model of elements on a webpage.
 it can be manipulated with javascript by changin element attributes or removing/adding elements
 #### What are events and how/why to use them in Javascript?
-
+events that occur when the user or the browser manipulates a page.
+events can be used to make a web page interactive(making it react to specific events)
 #### What is event bubbling/capturing? How would you use it?
+Event bubbling and capturing are two ways of event propagation in the DOM, when an event occurs in an element inside another element, and both elements have handles for that event.
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
 
 #### What is JSON and how do we use it?
 JavaScript Object Notation is a data interchange format
@@ -316,22 +320,89 @@ because you can organize your packages much better and know exactly the packages
 application programming interface
 it's a set of functions that allows applications to access data and interact with external services.
 #### What is REST API?
+a REST API is an API that conforms to the REST(REpresentational State Transefer) architectural style.
 #### What is JSON? When to use?
+avaScript Object Notation is a data interchange format
+it's commonly used to transmit data objects that consist of key:value pairs.
 #### What is TCP/IP? What layers does it define, what are they responsible for?
+TCP/IP refers to the internet protocol suite. A set of protocols used on the internet and similiar networks.
+The TCP/IP model consists of 4 layers:
+link layer:Responsible for handling the physical side of the connection(network cables,wireless network,network interfaces etc.)
+internet layer:Responsible for the flow and routing of network traffic.
+transport layer: provides a reliable data connection between communicating devices
+and the application layer: allows the user to access and interface with the network(email,messagging apps,browsers etc.)
 #### What’s the difference between TCP and UDP?
+TCP is connection oriented while UDP is a connectionless protocol
+TCP is slower but more reliable because it acknowledges any packets sent with an ACK packet and also requires setting up a stable connection using a TCP 3way handshake before data can be sent.
+TCP also uses error checking with a crc32 checksum and re-send any corrupted data.
+UDP doesn't require any of those reliability measures. It simply sends the data continously, making it much faster.
 #### How does an HTTP Request look like? What are the most relevant HTTP header fields?
+An HTTP request consists of 
+    A Request-line
+    Header fields
+    An empty line indicating the end of the header fields
+    and sometimes a message-body
+
+the most relevant headers are:
+Method 
+Host
+Path 
+HTTP version 
+Headers (optional) 
+Query String (optional)
+Body (optional)
 #### How does an HTTP Response look like? What are the most relevant HTTP header fields?
+An HTTP response contains:
+
+A status line.
+A series of HTTP headers, or header fields.
+A message body, which is usually needed.
+
 #### What is DNS? How does it work?
+DNS is a naming system used to identify computers through the internet.
+DNS records store a computers public IP associated with it's domain name.
+When a user tries to acces a server using a URL a request is sent to the dns server with the domain name.
+The server resolves the domain name and returns the IP address associated with the domain name so the user's computer can connect to the server.
 #### What is a web server?
+A web server is a computer that stores web server software and the components of a website(html,css,js etc. files)
 #### Explain the client-server architecture.
+the client-server architecture is a centralized architechure.
+In a client-server architecture the central server hosts, delivers and manages most of the resources and services to be consumed by the client.
 #### What would you use a session for?
+sessions are used to store data for individual users against a unique ID. This can be used to store data between page requests
 #### What would you use a cookie for?
+to identify users as they navigate through different pages of a website,and to identify returning users.
 
 ## Software Development Methodologies
 
 #### What kind of software development methodologies do you know? What are the main features of these?
+Waterfall method:The waterfall method is a rigid linear model that consists of sequential phases, each phase must be complete before the other phase starts
+Agile development: 
+Only work on the most important tasks at any given point in time
+Break tasks into small tasks for individuals to work on
+Catch up for about 10-20 minutes every morning on progress
 #### What are the SCRUM roles?
+There are 3 roles in scrum: 
+Product Owner
+Development Team
+Scrum Master
 #### What are the SCRUM ceremonies?
+there are 5 scrum ceremonies or events
+    Sprint Planning.
+    Daily Scrum.
+    The Sprint.
+    Sprint Review.
+    Sprint Retrospective.
+    
 #### What are the SCRUM artifacts?
+the main scrum artifacts are 
+product backlog(what to do), 
+sprint backlog(what to do in the current sprint), 
+product increment(what got added to the product)
 #### What is the main goal of a retrospective meeting?
+ For the team members to discuss among themselves about how the work went during the last sprint so that better ways can be found to meet the project's goals
 #### Explain, when would you recommend to use the waterfall methodology?
+Waterfall should be used when:
+The project has strict  requirements
+Requirements and project scope are known and won't change
+Budget and timelines are fixed
