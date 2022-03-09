@@ -152,6 +152,18 @@ you can call it like:
 
     variable()
 #### List the ways of defining a callable logical unit in JavaScript!
+as statement: 
+        
+    function myFunction() {}
+as expression: 
+
+    let variable = function myFunction() {} or in object
+as arrow function: 
+
+    let variable = (parameter) => logic;
+as constructor: 
+
+    let variable = Function('parameter', 'return logic')
 #### What is an event listener? How to attach one?
 an event listener is an object that handles events and executes a function when a specified event occurs
 attaching:
