@@ -84,6 +84,14 @@ Also TDD produces a higher overall test coverage and, therefore to a better qual
 
 #### What are the unit testing best practices? (Eg. how many assertion should a test case contain?)
 
+unit tests should be fast,isolated and repeatable
+
+Fast: Unit tests should take very little time to run(miliseconds).
+
+Isolated: Unit tests are standalone, can be run in isolation, and have no dependencies on any outside factors such as a file system or database.
+
+Repeatable: Running a unit test should be consistent with its results, that is, it always returns the same result if you do not change anything in between runs.
+
 Proper unit tests should fail for exactly one reason, meaning they should containt only one assertion.
 
 #### What is arrange/act/assert pattern?

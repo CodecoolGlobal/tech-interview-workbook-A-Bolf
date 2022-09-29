@@ -16,7 +16,7 @@ ASP.NET MVC 5 is a web framework based on Model-View-Controller (MVC) architectu
 
 Model: Model represents the shape of the data. A class in C# is used to describe a model.(Model represents the data)
 
-View: View in MVC is a user interface. View display model data to the user and also enables them to modify them.(View is the User Interface)
+View: View in MVC is a user interface. View displays model data to the user and also enables them to modify them.(View is the User Interface)
 
 Controller: The controller handles the user request. Typically, the user uses the view and raises an HTTP request, which will be handled by the controller. The controller processes the request and returns the appropriate view as a response.(Controller is the request handler)
 
@@ -35,7 +35,7 @@ Razor View Enginge is the default view engine for asp.net mvc and it uses razor 
 
 ### What you mean by Routing in MVC?
 
-In MVC, routing is a process of mapping the browser request to the controller action and return response back.
+In MVC, routing is a process of mapping the browser request to the controller action and returning the response.
 
 ### What is Layout in MVC?
 
@@ -73,8 +73,7 @@ It provides auto-generated code.
 allows developers to visually design models and mapping of databases.
 
 the main drawbacks of EF are:
-Lazy loading
-complicated syntax
+Lazy loading by default
 Slow data access
 
 ### What is lazy loading?
